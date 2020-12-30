@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>県名</th>
+            <th>陽性患者数</th>
+        </tr>
+        <?
+        var data = SpreadsheetApp.getActiveSheet().getDataRange().getDisplayValues();
+        for (var i = 0; i < data.length; i++)
+        {
+          output._ = '<tr>';
+          output._ = '<td>' + data[i][3] + '</td>';
+          output._ = '<td>' + data[i][5] + '</td>';
+          output._ = '</tr>';
+        }
+      ?>
+    </table>
+</body>
+
+</html>
